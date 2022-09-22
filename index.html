@@ -9,9 +9,23 @@
   <title>Todo app</title>
 </head>
 <body>
-  <header>
-    <img src="./images/bg-mobile-light.jpg" alt="">
-  </header>
-  
+  <section class="container">
+    <header class="banner">    
+        <h1>todo</h1>
+        <a id="botao"><img src="./images/icon-sun.svg" alt=""></a>
+    </header>
+    <form class="newTodo">
+        <input id='todoCheck' type="checkbox" name="" id="">
+        <input id='todoInput' type="text">
+    </form>
+  </section>  
+
+
+
+
+  <script>
+    const botao = document.getElementById('botao');
+    botao.addEventListener('click', ()=>{console.log('fui clicado')})
+  </script>
 </body>
 </html>

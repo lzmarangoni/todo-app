@@ -1,0 +1,48 @@
+body{
+    font-family: 'Josefin Sans', sans-serif; 
+    background-color: hsl(0, 0%, 98%); 
+    background-image: url('../images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 200px;
+    box-sizing: border-box;
+  
+    justify-content: center;
+}
+.container{
+    width: 360px;
+    box-sizing: border-box;
+    padding: 40px 15px;
+   
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: white;
+    font-size: 25px;
+}
+.banner img{
+    height: 15px;
+}
+
+.newTodo{
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius:5px;
+    margin-top: 40px;
+}
+.newTodo #todoInput{
+    border:none;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
+}
+
