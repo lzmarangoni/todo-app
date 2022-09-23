@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Josefin+Sans">
   <title>Todo app</title>
 </head>
+
 <body>
   <section class="container">
-    <header class="banner">    
-        <h1>todo</h1>
-        <a id="botao"><img src="./images/icon-sun.svg" alt=""></a>
+    <header class="banner">
+      <h1>todo</h1>
+      <a id="botao"><img src="./images/icon-sun.svg" alt=""></a>
     </header>
+    
     <form class="newTodo">
-      <div class="todoCheck">
-        <input id="radioCheck"type="checkbox" >
-        <label for="radioCheck"></label>
+      <div id='newTaskButton' class="todoCheck">
+        <input id="newTask" class="newTask" type="checkbox">
+        <label for="newTask"></label>
       </div>
-      <input id='todoInput' type="text">  
+      <input id='todoInput' type="text">
     </form>
-    <section class="todoList">
-        <ul>
-          <li class="todoItem">
-            <div class="todoCheck">
-              <input id="radioCheck2" type="checkbox" >
-              <label for="radioCheck2"></label>
-            </div>
-            <p>Primeira tarefa</p> 
-            <a><img src="/images/icon-cross.svg"></a>
-          </li>
-          <li class="todoItem">
-            <div class="todoCheck">
-              <input id="radioCheck2" type="checkbox" >
-              <label for="radioCheck2"></label>
-            </div>
-            <p>Primeira tarefa</p> 
-            <a><img src="/images/icon-cross.svg"></a>
-          </li>
-        </ul>
-    </section>
+    
+    <ul class="todoList">
+        <li class="todoItem">
+          <div id="taskDone" class="checkCustom">
+            <input id="radioCheck2" type="checkbox">
+            <label for="radioCheck2"></label>
+          </div>
+          <span>Primeira tarefa</span>
+          <button class="btnDelete"></button>
+        </li>
+        
+      </ul> 
+   
 
-  </section>  
+  </section>
 
 
 
 
   <script src="./js/todoApp.js"></script>
 
-  
+
 </body>
+
 </html>

@@ -47,10 +47,10 @@ body{
     margin-left: 10px;
 }
 
+
 .todoCheck input{
     display: none;
 }
-
 .todoCheck input + label:before{
     content:'';
     width: 20px;
@@ -64,6 +64,24 @@ body{
     background-image: url('../images/icon-check.svg');
     color: rgb(135, 231, 255);
 }
+
+.checkCustom input{
+    display: none;
+}
+
+.checkCustom input + label:before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    border: 1px solid grey;
+    
+}
+.checkCustom input:checked + label:before{
+    background-image: url('../images/icon-check.svg');
+    color: rgb(135, 231, 255);
+}
 .todoItem{
     display: flex;
     box-sizing: border-box;
@@ -74,16 +92,29 @@ body{
     margin:2px 0px;
     align-items: center;
 }
-.todoItem:hover {
-    scale: 105%;
-    transition-duration: 0.8s;
-    background-color: hsl(0, 0%, 98%);
-}
 
-.todoItem p{
+
+.todoItem span{
     font-size: 13px;
     color: hsl(235, 19%, 35%);
     width: 80%;
     padding: 0px 15px;
 }
 
+.click{
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+    border:none
+}
+
+.btnDelete{
+    background-image: url('../images/icon-cross.svg');
+    background-size: cover;    
+    background-repeat: no-repeat;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px ;
+    background-color: white;
+    cursor: pointer;
+}
