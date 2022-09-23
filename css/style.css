@@ -37,12 +37,53 @@ body{
     background-color: white;
     padding: 10px 15px;
     border-radius:5px;
-    margin-top: 40px;
+    margin: 35px 0px;
+    justify-content: space-between;
 }
 .newTodo #todoInput{
     border:none;
     width: 100%;
     outline: none;
     margin-left: 10px;
+}
+
+.todoCheck input{
+    display: none;
+}
+
+.todoCheck input + label:before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    border: 1px solid grey;
+    
+}
+.todoCheck input:checked + label:before{
+    background-image: url('../images/icon-check.svg');
+    color: rgb(135, 231, 255);
+}
+.todoItem{
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius:5px;
+    justify-content: space-between;
+    margin:2px 0px;
+    align-items: center;
+}
+.todoItem:hover {
+    scale: 105%;
+    transition-duration: 0.8s;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.todoItem p{
+    font-size: 13px;
+    color: hsl(235, 19%, 35%);
+    width: 80%;
+    padding: 0px 15px;
 }
 

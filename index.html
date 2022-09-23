@@ -15,17 +15,40 @@
         <a id="botao"><img src="./images/icon-sun.svg" alt=""></a>
     </header>
     <form class="newTodo">
-        <input id='todoCheck' type="checkbox" name="" id="">
-        <input id='todoInput' type="text">
+      <div class="todoCheck">
+        <input id="radioCheck"type="checkbox" >
+        <label for="radioCheck"></label>
+      </div>
+      <input id='todoInput' type="text">  
     </form>
+    <section class="todoList">
+        <ul>
+          <li class="todoItem">
+            <div class="todoCheck">
+              <input id="radioCheck2" type="checkbox" >
+              <label for="radioCheck2"></label>
+            </div>
+            <p>Primeira tarefa</p> 
+            <a><img src="/images/icon-cross.svg"></a>
+          </li>
+          <li class="todoItem">
+            <div class="todoCheck">
+              <input id="radioCheck2" type="checkbox" >
+              <label for="radioCheck2"></label>
+            </div>
+            <p>Primeira tarefa</p> 
+            <a><img src="/images/icon-cross.svg"></a>
+          </li>
+        </ul>
+    </section>
+
   </section>  
 
 
 
 
-  <script>
-    const botao = document.getElementById('botao');
-    botao.addEventListener('click', ()=>{console.log('fui clicado')})
-  </script>
+  <script src="./js/todoApp.js"></script>
+
+  
 </body>
 </html>
