@@ -26,23 +26,26 @@ function createTask(task){
 function newLi(task){
     let li = document.createElement('li')
     li.classList.add("todoItem")
+    li.id = task.id
 
     let div = document.createElement('div')
-    
+    div.classList.add("checkCustom")
     
     let input = document.createElement('input')
+    input.setAttribute('type','checkbox' )
+    input.id = `input${task.id}`
     
+
     let label = document.createElement('label')
-    div.classList.add("checkCustom")
+    label.setAttribute('for',`input${task.id}` )
+
+
     let span = document.createElement('span')
     span.innerHTML = task.nome
     
     let deleteButton = document.createElement('button')
     deleteButton.classList.add('btnDelete')
     deleteButton.setAttribute('onclick', 'deleteTask('+task.id+')')
-
-  
-
 
     
     li.appendChild(div)
@@ -55,7 +58,10 @@ function newLi(task){
 }
 
 function deleteTask(taskID){
-    console.log(taskID)
+    let li = document.getElementById(''+taskID +'')
+    if(li){
+        todoList.removeChild(li)
+    } 
 }
 
 
