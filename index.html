@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Josefin+Sans">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Todo app</title>
 </head>
 
-<body>
+<body class="bodyContent">
   <section class="container">
     <header class="banner">
       <h1>todo</h1>
-      <a id="botao"><img src="./images/icon-sun.svg" alt=""></a>
+      <a class="darkLight"><img class="buttonImg" src="./images/icon-moon.svg" alt=""></a>
     </header>
-    
+
     <form class="newTodo">
       <div id='newTaskButton' class="todoCheck">
         <input id="newTask" class="newTask" type="radio">
@@ -24,12 +24,17 @@
       </div>
       <input id='todoInput' type="text" placeholder="Create a new todo...">
     </form>
-    
+
     <ul class="todoList">
-    </ul> 
-   
+    </ul>
+    <!--div class="filter">
+        <label for="Complete"><input id="All" name="radio" type="radio">All</label>
+        <label for="Complete"><input id="Active" name="radio" type="radio">Active</label>
+        <label for="Complete"><input id="Complete" name="radio" type="radio">Complete</label>
+    </div>-->
 
   </section>
+
 
 
 

@@ -6,12 +6,15 @@ const todoList = document.querySelector('.todoList')
 
 addTask.addEventListener('click',()=>{
     let task = {
-        nome: todoInput.value,
+        name: todoInput.value,
         id: randomId()
     }
+    if(task.name === ""){
+        alert("A nova tarefa não pode ser vazia...")
+        return
+    }else{
     createTask(task)
-    console.log(task)
-    todoInput.value =''
+    todoInput.value =''}
 })
 
 function randomId(){
@@ -30,10 +33,12 @@ function newLi(task){
 
     let div = document.createElement('div')
     div.classList.add("checkCustom")
+    div.id = `div${task.id}`
     
     let input = document.createElement('input')
     input.setAttribute('type','checkbox' )
     input.id = `input${task.id}`
+   
     
 
     let label = document.createElement('label')
@@ -41,18 +46,27 @@ function newLi(task){
 
 
     let span = document.createElement('span')
-    span.innerHTML = task.nome
-    
+    span.innerHTML = task.name
+    span.id = `span${task.id}`
+
     let deleteButton = document.createElement('button')
     deleteButton.classList.add('btnDelete')
     deleteButton.setAttribute('onclick', 'deleteTask('+task.id+')')
 
-    
+    div.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          li.classList.add("taskDone")
+        } else {
+          li.classList.remove("taskDone")
+        }
+      })
+
     li.appendChild(div)
     div.appendChild(input)
     div.appendChild(label)
     li.appendChild(span)
     li.appendChild(deleteButton)
+    
 
     return li
 }
@@ -65,3 +79,25 @@ function deleteTask(taskID){
 }
 
 
+
+
+let botaoLightDark = document.querySelector(".darkLight")
+let bodyContent = document.querySelector(".bodyContent")
+let buttonImg = document.querySelector(".buttonImg")
+let todoItem = document.querySelector(".todoItem")
+
+
+botaoLightDark.addEventListener("click",()=>{
+    botaoLightDark = !botaoLightDark
+    console.log(botaoLightDark)
+    if(botaoLightDark){
+        bodyContent.classList.remove("darkMode")
+        buttonImg.setAttribute('src','./images/icon-moon.svg')
+    }else{
+        bodyContent.classList.add("darkMode")
+        
+        buttonImg.setAttribute('src','./images/icon-sun.svg')
+    }
+})
+
+ 
