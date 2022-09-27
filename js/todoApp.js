@@ -106,7 +106,7 @@ function darkMode(){
         buttonImg.setAttribute('src','./images/icon-sun.svg')
         todoForm.classList.add("darkModeItem")
         todoList.classList.add("darkModeItem")
-        filter.classList.add("darkModeFilter")
+       
 }
 
 function lightMode(){
@@ -114,6 +114,6 @@ function lightMode(){
         buttonImg.setAttribute('src','./images/icon-moon.svg')
         todoForm.classList.remove("darkModeItem")
         todoList.classList.remove("darkModeItem")
-        filter.classList.remove("darkModeFilter")
+     
 
 }
