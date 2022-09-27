@@ -36,6 +36,7 @@ function newLi(task){
     div.id = `div${task.id}`
     
     let input = document.createElement('input')
+   
     input.setAttribute('type','checkbox' )
     input.id = `input${task.id}`
    
@@ -56,11 +57,13 @@ function newLi(task){
     div.addEventListener("change", (e) => {
         if (e.target.checked) {
           li.classList.add("taskDone")
+       
         } else {
           li.classList.remove("taskDone")
+          
         }
       })
-
+    
     li.appendChild(div)
     div.appendChild(input)
     div.appendChild(label)
@@ -84,20 +87,33 @@ function deleteTask(taskID){
 let botaoLightDark = document.querySelector(".darkLight")
 let bodyContent = document.querySelector(".bodyContent")
 let buttonImg = document.querySelector(".buttonImg")
+let todoForm = document.querySelector(".newTodo")
 let todoItem = document.querySelector(".todoItem")
-
+let filter = document.querySelector(".filter")
 
 botaoLightDark.addEventListener("click",()=>{
     botaoLightDark = !botaoLightDark
-    console.log(botaoLightDark)
+    
     if(botaoLightDark){
-        bodyContent.classList.remove("darkMode")
-        buttonImg.setAttribute('src','./images/icon-moon.svg')
+        lightMode()
     }else{
-        bodyContent.classList.add("darkMode")
-        
-        buttonImg.setAttribute('src','./images/icon-sun.svg')
+        darkMode()
     }
 })
 
- 
+function darkMode(){
+        bodyContent.classList.add("darkMode")
+        buttonImg.setAttribute('src','./images/icon-sun.svg')
+        todoForm.classList.add("darkModeItem")
+        todoList.classList.add("darkModeItem")
+        filter.classList.add("darkModeFilter")
+}
+
+function lightMode(){
+        bodyContent.classList.remove("darkMode")
+        buttonImg.setAttribute('src','./images/icon-moon.svg')
+        todoForm.classList.remove("darkModeItem")
+        todoList.classList.remove("darkModeItem")
+        filter.classList.remove("darkModeFilter")
+
+}
